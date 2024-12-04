@@ -35,9 +35,20 @@ a {
     }
 }
 
+.navbar.scrolled {
+    background-color: rgba(31, 36, 45, 0.9); /* Semi-transparent background */
+    padding: 15px 9%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .logo {
+    color: chartreuse;
+}
+
 .navbar .logo {
     font-size: 30px;
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .navbar ul {
@@ -52,12 +63,31 @@ a {
 .navbar ul li a {
     font-size: 20px;
     font-weight: 500;
-    transition: .5s;
+    transition: color 0.5s, transform 0.3s;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: chartreuse;
+    transition: width 0.3s ease;
+}
+
+
+.navbar ul li:hover a::after,
+.navbar ul li.active a::after {
+    width: 100%;
 }
 
 .navbar ul li:hover a,
 .navbar ul li.active a{
     color: chartreuse;
+    transform: scale(1.05);
 }
 
 .home {
@@ -223,6 +253,168 @@ a {
     mix-blend-mode: lighten;
 }
 
+/* About Section Styles */
+.acerca {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    color: #ffffff;
+    background-color: #2c3e50;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: chartreuse;
+}
+
+.about-info {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h6 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: chartreuse;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.skill-list li {
+    background-color: #34495e;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skill-list li:hover {
+    transform: scale(1.1);
+    background-color: chartreuse;
+    color: #1f242d;
+}
+
+/* Portfolio Section Styles */
+.portifolio {
+    min-height: 100vh;
+    padding: 60px 9%;
+    background-color: #1f242d;
+    color: #ffffff;
+}
+
+.portfolio-content h1 {
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: chartreuse;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #2c3e50;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px  chartreuse;
+}
+
+.project-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-details h6 {
+    color: chartreuse;
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styles */
+.contacto {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+.contact-content h1 {
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: chartreuse;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1f242d;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.form-input:focus {
+    outline: 2px solid chartreuse;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit .btn {
+    width: 100%;
+}
+
 .bars-animation {
     position: absolute;
     width: 100%;
@@ -245,3 +437,4 @@ a {
         transform: translateY(0%);
     } 
 }
+

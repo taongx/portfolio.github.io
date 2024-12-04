@@ -13,12 +13,12 @@
 <body>
 
     <nav class="navbar">
-        <a href="#" class="logo">Portifolio</a>
+        <a href="#" class="logo">Taonga</a>
         <ul>
-            <li class="active"><a href="#">home</a></li>
-            <li><a href="#">acerca</a></li>
-            <li><a href="#">portifolio</a></li>
-            <li><a href="#">contacto</a></li> 
+            <li><a href="#home">home</a></li>
+            <li><a href="#acerca">acerca</a></li>
+            <li><a href="#portifolio">portifolio</a></li>
+            <li><a href="#contacto">contacto</a></li>
         </ul>
     </nav>
 
@@ -31,21 +31,24 @@
         <div class="bar" style="--i:1;"></div>
     </div>
 
-    <section class="home">
+    <!--home-->
+    <section class="section home" id="home">
         <div class="home-info">
             <h1>Taonga Sonjo</h1>
-            <h2>Eu sou um 
-                <span style="--i:4;"  data-text="estudande">estudande</span>
-                <span style="--i:3;"  data-text="e game dev">e game dev</span>
-                <span style="--i:2;"  data-text="estudande">estudande</span>
-                <span style="--i:1;"  data-text="e game dev">e game dev</span>
+            <h2>Eu sou um
+                <span style="--i:4;" data-text="estudande">estudande</span>
+                <span style="--i:3;" data-text="e game dev">e game dev</span>
+                <span style="--i:2;" data-text="estudande">estudande</span>
+                <span style="--i:1;" data-text="e game dev">e game dev</span>
             </h2>
             <p>este e o meu trabalho</p>
             <div class="btn-sci">
-                <a href="https://docs.google.com/document/d/1wv2Tk75B5AKhiCf1z-nVUkOUYkTHEDZm/edit?usp=drive_link&ouid=113921875559352830203&rtpof=true&sd=true" class="btn">Download CV</a>
+                <a href="https://docs.google.com/document/d/1wv2Tk75B5AKhiCf1z-nVUkOUYkTHEDZm/edit?usp=drive_link&ouid=113921875559352830203&rtpof=true&sd=true"
+                    class="btn">Download CV</a>
                 <div class="sci">
                     <a href="https://github.com/taongx"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/taong.x?igsh=cXc4ODQ2ZmZyYm96"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.instagram.com/taong.x?igsh=cXc4ODQ2ZmZyYm96"><i
+                            class='bx bxl-instagram'></i></a>
                     <a href="https://x.com/Taongx"><i class='bx bxl-twitter'></i></a>
                     <a href="https://www.reddit.com/user/taongax/"><i class='bx bxl-reddit'></i></a>
                 </div>
@@ -61,6 +64,106 @@
         </div>
     </section>
 
+    <!--acerca-->
+    <section class="section acerca" id="acerca">
+        <div class="about-content">
+            <h1>Sobre Mim</h1>
+            <div class="about-info">
+                <p>Olá! Sou Taonga Sonjo, um estudante apaixonado por desenvolvimento de jogos. Minha jornada no mundo
+                    do desenvolvimento de software é movida pela criatividade e pela vontade de criar experiências
+                    interativas únicas. Estou constantemente aprendendo e explorando novas tecnologias para aprimorar
+                    minhas habilidades de game development.</p>
+
+                <div class="interests">
+                    <h3>Meus principais interesses incluem:</h3>
+                    <ul>
+                        <li>Desenvolvimento de jogos independentes</li>
+                        <li>Programação de mecânicas de jogos</li>
+                        <li>Design de experiência do usuário em jogos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills">
+                <h2>Minhas Habilidades</h2>
+                <ul class="skill-list">
+                    <li>Game Development</li>
+                    <li>Godot</li>
+                    <li>GDscript</li>
+                    <li>Python</li>
+                    <li>Pixel Art</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--portifolio-->
+    <section class="section portifolio" id="portifolio">
+        <div class="portfolio-content">
+            <h1>Meu Portfólio</h1>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="projeto1.png" alt="Projeto 1">
+                    </div>
+                    <div class="project-details">
+                        <h3>Jogo de Plataforma</h3>
+                        <p>Meu primeiro jogo indie desenvolvido em Unity</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="projeto2.png" alt="Projeto 2">
+                    </div>
+                    <div class="project-details">
+                        <h3>RPG de Aventura</h3>
+                        <p>Um RPG com mecânicas de combate única</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="projeto3.png" alt="Projeto 3">
+                    </div>
+                    <div class="project-details">
+                        <h3>Jogo de Puzzle</h3>
+                        <p>Desafie sua mente com este jogo de quebra-cabeça</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contacto-->
+    <section class="section contacto" id="contacto">
+        <div class="contact-content">
+            <h1>Contato</h1>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" class="form-input" required></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
 </body>
 
 </html>
